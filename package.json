@@ -1,0 +1,29 @@
+{
+  "name": "kiitos.heartbank.exchange",
+  "version": "1.0.0",
+  "description": "Universal Income Bot",
+  "main": "kiitos.mjs",
+  "scripts": {
+    "start": "sudo nodemon kiitos.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "renew": "sudo certbot --manual --preferred-challenges dns certonly -d dns.heartbank.exchange",
+    "copy1": "sudo cp /etc/letsencrypt/live/dns.heartbank.exchange/fullchain.pem /Users/heartbank/Desktop/HeartBank®/Heart\\ Bank\\ Trust/dApps/heartbank.exchange/kiitos.heartbank.exchange",
+    "copy2": "sudo cp /etc/letsencrypt/live/dns.heartbank.exchange/privkey.pem /Users/heartbank/Desktop/HeartBank®/Heart\\ Bank\\ Trust/dApps/heartbank.exchange/kiitos.heartbank.exchange"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeartBank/kiitos.heartbank.exchange.git"
+  },
+  "author": "THonly™",
+  "license": "HeartBank®",
+  "bugs": {
+    "url": "https://github.com/HeartBank/kiitos.heartbank.exchange/issues"
+  },
+  "homepage": "https://github.com/HeartBank/kiitos.heartbank.exchange#readme",
+  "dependencies": {
+    "coinbase-pro": "^0.9.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.6"
+  }
+}
