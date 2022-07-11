@@ -24,3 +24,11 @@ The FIX API throttles the number of incoming messages to 50 commands per second,
 A maximum of 7 connections can be established per profile.
 
 */
+
+import { sendMail } from "./mail.mjs";
+
+export async function kiitos(client) {
+  const date = new Date((await client.getTime()).iso).toLocaleString();
+  console.info(date)
+  sendMail("Hello World", date);
+}
